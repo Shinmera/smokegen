@@ -219,6 +219,10 @@ public:
 	double s_double;
         long s_enum;
         void* s_class;
+#ifdef _WIN64
+        size_t t_size_t;
+        size_t s_size_t;
+#endif
     };
     enum TypeId {
 	t_voidp,
@@ -235,6 +239,10 @@ public:
 	t_double,
         t_enum,
         t_class,
+#ifdef _WIN64
+        t_size_t,
+        s_size_t,
+#endif
 	t_last		// number of pre-defined types
     };
 
